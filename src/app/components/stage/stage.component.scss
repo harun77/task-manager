@@ -1,0 +1,14 @@
+:host {
+    width: 33%;
+    min-height: 90vh;
+    border: 2px solid;
+    background-color: var(--bgColor);
+}
+
+.title {
+    border-bottom: 2px solid;
+    padding: 0 12px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+}

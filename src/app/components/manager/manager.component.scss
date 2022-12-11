@@ -1,0 +1,13 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.stages {
+    display: flex;
+}
+
+.add-btn {
+    float: right;
+}

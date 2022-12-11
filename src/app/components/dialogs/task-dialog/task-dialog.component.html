@@ -1,0 +1,87 @@
+<span mat-dialog-title>
+    <h1>{{ title }}</h1>
+</span>
+<div mat-dialog-content>
+    <form [formGroup]="formGroup" (ngSubmit)="save()">
+        <div>
+            <mat-form-field>
+                <mat-label>Title</mat-label>
+                <input matInput formControlName="title" autocomplete="off">
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field>
+                <mat-label>Description</mat-label>
+                <input matInput formControlName="description" autocomplete="off">
+            </mat-form-field>
+        </div>
+
+        <div>
+            <h2>Priority</h2>
+            <mat-radio-group formControlName="priority">
+                <mat-radio-button value="low">Low</mat-radio-button>
+                <mat-radio-button value="medium">Medium</mat-radio-button>
+                <mat-radio-button value="high">High</mat-radio-button>
+            </mat-radio-group>
+
+        </div>
+
+        <div>
+            <h2>Start date</h2>
+            <mat-form-field>
+                <input matInput formControlName="startDate" [matDatepicker]="picker">
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <h2>End date</h2>
+            <mat-form-field>
+                <input matInput formControlName="endDate" [matDatepicker]="picker2">
+                <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+                <mat-datepicker #picker2></mat-datepicker>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <h2>Status</h2>
+            <mat-form-field>
+                <mat-select formControlName="status">
+                    <mat-option value="todo">To-do</mat-option>
+                    <mat-option value="inprogress">In-progress</mat-option>
+                    <mat-option value="done">Done</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <h2>Assignee</h2>
+            <mat-form-field>
+                <mat-select formControlName="assignee">
+                    <mat-option value="hor">Harun Ur Rashid</mat-option>
+                    <mat-option value="arc">Ashik</mat-option>
+                    <mat-option value="mat">Turjo</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <h2>Attachment</h2>
+        </div>
+
+        <div>
+            <h2>SubTask</h2>
+        </div>
+    </form>
+</div>
+
+<div mat-dialog-actions>
+    <button mat-button mat-dialog-close>
+        Close
+    </button>
+    <button mat-raised-button mat-dialog-close [disabled]="formGroup.invalid" color="primary" (click)="save()">
+        Save
+    </button>
+</div>

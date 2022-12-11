@@ -1,0 +1,7 @@
+<button class="add-btn" mat-raised-button color="primary" (click)="addTask()">Add Task</button>
+
+<div class="stages">
+    <stage [bgColor]="'aliceblue'" [title]="'To-do'" [tasks]="todo"></stage>
+    <stage [bgColor]="'#d8edd8'" [title]="'In-progress'" [tasks]="inprogress"></stage>
+    <stage [bgColor]="'lightgrey'" [title]="'Done'" [tasks]="done"></stage>
+</div>

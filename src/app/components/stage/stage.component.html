@@ -1,0 +1,9 @@
+<div class="title">
+    <p>{{ title }}</p>
+</div>
+
+<div>
+    <div *ngFor="let task of tasks">
+        <task [task]="task"></task>
+    </div>
+</div>
